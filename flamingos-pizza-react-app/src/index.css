@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --dark: #1F282E;
+  --light: #FFF;
+  --light-pink: #EFCECD;
+  --light-coral: #D57A76;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;  
+  color: var(--light-pink)
+}
+
+/** HEADER **/
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+.navbar__brand {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar__brand-icon {
+  font-size: 70px;
+}
+
+.navbar__brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--light-pink)
+}
+
+.brand-title--first-letter::first-letter {
+  color: var(--light-coral);
+}
+
+.navbar__hamburger-icon {
+  font-size: 30px;
+}
+
+.navbar__links {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.navbar__link {
+  display: block;
+  padding: 0.5rem;
+  font-size: 18px;
+}

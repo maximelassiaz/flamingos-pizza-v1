@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  --dark: #1F282E;
+  --transparency: 0.3;
   --light: #FFF;
-  --light-pink: #EFCECD;
-  --light-coral: #D57A76;
+  --grey: hsla(208, 8%, 53%, 1);
+  --grey-transparent: hsla(208, 8%, 53%, var(--transparency));
+  --dark: #1F282E;
+  --light-pink: hsla(2, 52%, 87%, 1);
+  --light-pink-transparent: hsla(2, 52%, 87%, var(--transparency));
+  --light-coral: hsla(3, 53%; 65%, 1);
+  --light-coral-transparent: hsla(3, 53%, 65%, var(--transparency));
+  --dark-coral: hsla(7, 59%, 36%, 1);
+  --dark-coral-transparent: hsla(7, 59%, 36%, var(--transparency));
 }
 
 body {
@@ -12,6 +19,39 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-pink-transparent);
+  color: var(--dark);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 230px;
+  left: 30px;
+  background-color: var(--grey-transparent);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 350px;
+  right: -70px;
+  background-color: var(--dark-coral-transparent);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 ul {
@@ -25,7 +65,7 @@ a {
   color: var(--light-pink)
 }
 
-/** HEADER **/
+/*** HEADER ***/
 
 .navbar {
   display: flex;
@@ -53,11 +93,13 @@ a {
 }
 
 .brand-title--first-letter::first-letter {
+  font-size: 30px;
   color: var(--light-coral);
 }
 
 .navbar__hamburger-icon {
   font-size: 30px;
+  color: var(--light-pink)
 }
 
 .navbar__links {
@@ -69,4 +111,31 @@ a {
   display: block;
   padding: 0.5rem;
   font-size: 18px;
+}
+
+/*** MAIN ***/
+
+.main-content {
+  min-height: 100vh;
+  padding: 20px 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  bottom: -100px;
+  left: 100px;
+  background-color: var(--light-coral-transparent);
+}
+
+/** HOMEPAGE **/
+
+.homepage__title {
+  margin-bottom: 50px;
+  text-align: center;
 }

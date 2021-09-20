@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 const App = () => {
   const [isMenuOpen, SetIsMenuOpen] = useState(false)
@@ -17,11 +18,14 @@ const App = () => {
           isMenuOpen={isMenuOpen}
           handleClickMenu={handleClickMenu}
         />
-        <Switch>
-          <Route exact path="/">
-
-          </Route>
-        </Switch>
+        <main className="main-content">
+          <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            
+          </Switch>
+        </main>
         <Footer /> 
       </Router>
     </>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react'
 import flamingoIcon from '@iconify/icons-openmoji/flamingo'
 import hamburgerMenu from '@iconify/icons-cil/hamburger-menu'
+import closeMenu from '@iconify/icons-clarity/close-line'
 
 const Header = ({ isMenuOpen, handleClickMenu }) => {
     return (
@@ -18,8 +19,7 @@ const Header = ({ isMenuOpen, handleClickMenu }) => {
                 </div>
                 <Icon
                     className="navbar__hamburger-icon"
-                    icon={hamburgerMenu}
-                    color="#D57A76"
+                    icon={isMenuOpen ? closeMenu : hamburgerMenu}
                     onClick={handleClickMenu}
                 />
                 {isMenuOpen && <ul className="navbar__links">

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@iconify/icons-cil": "^1.1.0",
+    "@iconify/icons-clarity": "^1.1.2",
     "@iconify/icons-openmoji": "^1.1.16",
     "@iconify/react": "^3.0.1",
     "@testing-library/jest-dom": "^5.14.1",
